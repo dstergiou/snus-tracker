@@ -7,7 +7,7 @@ Personal PWA for tracking snus pouch usage. Built with SvelteKit, stores all dat
 - Three (configurable) products on the home screen, each with a **Start / Stop** button
 - Live elapsed timer while a session is active
 - Only one session active at a time (starting product B auto-stops A)
-- 30-minute auto-stop guard against forgotten stops
+- 2-hour auto-stop guard against forgotten stops
 - **History** view with day / week / month aggregates and per-product breakdowns
 - Edit or delete past sessions
 - Manage products (add / edit / remove) with cost-per-pouch and nicotine mg

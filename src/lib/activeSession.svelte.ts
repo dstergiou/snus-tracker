@@ -1,7 +1,7 @@
 import type { Session } from './db';
 import { getActiveSession, startSession, stopActiveSession } from './db';
 
-export const MAX_SESSION_MS = 30 * 60 * 1000;
+export const MAX_SESSION_MS = 2 * 60 * 60 * 1000;
 
 class ActiveSessionStore {
 	current = $state<Session | undefined>(undefined);
