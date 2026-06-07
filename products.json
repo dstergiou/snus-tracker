@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "exportedAt": 1780870412924,
+  "products": [
+    {
+      "name": "Lundgrens Original Portion‎",
+      "nicotineMg": 7.7,
+      "costPerPouch": 1.86,
+      "createdAt": 1780870004090,
+      "id": 1
+    },
+    {
+      "name": "General Portion‎",
+      "nicotineMg": 8.5,
+      "costPerPouch": 2.31,
+      "createdAt": 1780870098222,
+      "id": 2
+    },
+    {
+      "name": "XQS Arctic Freeze",
+      "nicotineMg": 9.6,
+      "costPerPouch": 2,
+      "createdAt": 1780870409244,
+      "id": 3
+    }
+  ],
+  "sessions": []
+}
