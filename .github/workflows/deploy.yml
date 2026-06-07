@@ -32,6 +32,9 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
 
+      - name: Duplicate SPA fallback as index.html
+        run: cp build/404.html build/index.html
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
