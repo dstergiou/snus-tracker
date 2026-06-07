@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { liveQuery } from 'dexie';
+	import { base } from '$app/paths';
 	import { db, type Product, type Session } from '$lib/db';
 	import { activeSession } from '$lib/activeSession.svelte';
 	import { formatElapsed, formatCost, formatDuration } from '$lib/aggregate';
@@ -87,7 +88,7 @@
 {:else if $products.length === 0}
 	<div class="empty">
 		<p>No products yet.</p>
-		<p><a href="/products" class="link">Add your first product →</a></p>
+		<p><a href="{base}/products" class="link">Add your first product →</a></p>
 	</div>
 {:else}
 	<div class="stack">

@@ -53,9 +53,18 @@ Re-run after editing the SVG.
 
 `products.json` in the repo root is auto-loaded the first time the app runs on a fresh device (when the products table is empty). Edit this file to change the initial product list.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-Any static host works. The build output is in `./build`. iOS requires HTTPS for "Add to Home Screen", so localhost / file:// won't install.
+The repo has a workflow at `.github/workflows/deploy.yml` that builds the app with `BASE_PATH=/<repo-name>` and publishes to GitHub Pages on every push to `main`.
+
+One-time setup in the GitHub repo:
+
+1. Open **Settings → Pages**
+2. Set **Source** to **GitHub Actions**
+
+After the first successful run, the app is at `https://<username>.github.io/<repo-name>/`.
+
+To deploy to a different host, drop the build output (`./build`) anywhere that serves static files over HTTPS. iOS requires HTTPS for "Add to Home Screen", so localhost / file:// won't install.
 
 ## Install on iPhone
 

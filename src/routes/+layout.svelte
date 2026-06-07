@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
+	import { base } from '$app/paths';
 	import { activeSession } from '$lib/activeSession.svelte';
 	import { seedIfEmpty } from '$lib/db';
 	import InstallHint from '$lib/InstallHint.svelte';
@@ -23,15 +24,16 @@
 	});
 
 	const tabs = [
-		{ href: '/', label: 'Home', icon: '⏱' },
-		{ href: '/history', label: 'History', icon: '📊' },
-		{ href: '/products', label: 'Products', icon: '🏷' },
-		{ href: '/settings', label: 'Settings', icon: '⚙' }
+		{ href: `${base}/`, label: 'Home', icon: '⏱' },
+		{ href: `${base}/history`, label: 'History', icon: '📊' },
+		{ href: `${base}/products`, label: 'Products', icon: '🏷' },
+		{ href: `${base}/settings`, label: 'Settings', icon: '⚙' }
 	];
 
 	function isActive(href: string): boolean {
-		if (href === '/') return page.url.pathname === '/';
-		return page.url.pathname.startsWith(href);
+		const path = page.url.pathname;
+		if (href === `${base}/`) return path === `${base}/` || path === base;
+		return path.startsWith(href);
 	}
 </script>
 
