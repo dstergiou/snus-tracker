@@ -73,7 +73,8 @@
 
 	.content {
 		flex: 1;
-		padding: 1rem 1rem calc(72px + env(safe-area-inset-bottom));
+		padding: calc(1rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right))
+			calc(72px + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-left));
 		max-width: 640px;
 		width: 100%;
 		margin: 0 auto;
